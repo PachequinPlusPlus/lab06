@@ -34,6 +34,7 @@ function main(){
         e.preventDefault();
         $("#videos").html("");
         var tk;
+        var word = $("#search").val();
         if(e.target.id === "n"){
             tk = nxtToken;
         }else{
