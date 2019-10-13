@@ -7,12 +7,12 @@ function main(){
         e.preventDefault();
         var videoName = $("#search").val();
         $("#videos").html("");
-
+        var word = $("#search").val();
         $.ajax({
             url: url,
             data : {
                 key : apiKey,
-                q : "cat",
+                q : word,
                 part: "id, snippet",
                 maxResults : 10,
                 type : "video",
@@ -43,7 +43,7 @@ function main(){
             url : url,
             data : {
                 key : apiKey,
-                q : "cat",
+                q : word,
                 part: "id, snippet",
                 maxResults : 10,
                 type : "video",
